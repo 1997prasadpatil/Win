@@ -1,0 +1,69 @@
+class Product:
+    Product_company = 'RioTinto'
+    def __init__(self,prdid,prdname,prdqnty):
+        self.prdid = prdid
+        self.prdname=prdname
+        self.prdqnty=prdqnty
+        self.price = 475
+
+    @classmethod
+    def product_name_cal(cls):
+        cls.Product_company = 'RioTinto Ltd'
+
+    @staticmethod
+    def total_qnty_price_cal(q, p):
+        qnty_price = q * p
+        return qnty_price
+
+    def show(self):
+        print("Product id::",self.prdid)
+        print("Product name::",self.prdname)
+        print("Product qnty::",self.prdqnty)
+        print("Product Price ::",self.price)
+        tqpc = self.total_qnty_price_cal(self.prdqnty,self.price)
+        print("TQPC::",tqpc)
+        print("Product company name before ::",Product.Product_company)
+        self.product_name_cal()
+        print("Product company name After ::", Product.Product_company)
+
+obj = Product(101,'copper',150)
+obj.show()
+print(Product.Product_company)
+
+
+
+
+class Product:
+    Product_company = 'RioTinto'
+    def __init__(self,prdid,prdname,prdqnty):
+        self.prdid = prdid
+        self.prdname=prdname
+        self.prdqnty=prdqnty
+        self.price = 475
+
+    @classmethod
+    def product_name_cal(cls):
+        cls.Product_company = 'RioTinto Ltd'
+
+    @staticmethod
+    def total_qnty_price_cal(q, p):
+        qnty_price = q * p
+        return qnty_price
+
+    def show(self):
+        print("Product id::",self.prdid)
+        print("Product name::",self.prdname)
+        print("Product qnty::",self.prdqnty)
+        print("Product Price ::",self.price)
+        tqpc = self.total_qnty_price_cal(self.prdqnty,self.price)
+        print("TQPC::",tqpc)
+        print("Product company name before ::",Product.Product_company)
+        self.product_name_cal()
+        print("Product company name After ::", Product.Product_company)
+
+    def t1(self):
+        self.show()
+
+obj = Product(101,'copper',150)
+obj.t1()
+print(Product.Product_company)
